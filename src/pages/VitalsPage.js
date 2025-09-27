@@ -28,7 +28,7 @@ function VitalsPage() {
   const [roomInfo, setRoomInfo] = useState(null);
   const socketRef = useRef();
 const SOCKET = process.env.REACT_APP_SOCKET_URL;
-const API = "https://telemed-backend-3.onrender.com";
+
 
   // --- Socket.IO connection ---
   useEffect(() => {
@@ -71,7 +71,7 @@ const API = "https://telemed-backend-3.onrender.com";
 
   const fetchVitals = async () => {
     try {
-      const res = await fetch(`${API}/vitals`);
+      const res = await fetch(`http://localhost:5002/vitals`);
       const data = await res.json();
       const hr = data.heart_rate ?? data.heartRate;
       const sp = data.spo2 ?? data.SpO2;
