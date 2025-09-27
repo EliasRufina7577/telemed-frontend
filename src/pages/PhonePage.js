@@ -241,7 +241,7 @@ function PhonePage() {
           color: "#fff",
         }}
       >
-        <h1 style={{ fontSize: "28px", marginBottom: "10px" }}>Sehat Sathi</h1>
+        <h1 style={{ fontSize: "28px", marginBottom: "10px" }}>Sehat Bandhu</h1>
         <h2 style={{ fontSize: "20px", marginBottom: "20px" }}>{t("phoneNumber")}</h2>
 
         {/* Phone Input */}
