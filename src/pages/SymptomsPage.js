@@ -13,7 +13,7 @@ function SymptomsPage() {
   const [step, setStep] = useState(1);
 
   const recognitionRef = useRef(null);
-const API = "https://telemed-backend-3.onrender.com";
+
   const selectedLang = localStorage.getItem("appLanguage") || "en";
   const langMap = { en: "en-US", hi: "hi-IN", ta: "ta-IN", pa: "pa-IN" };
 //const API = process.env.REACT_APP_ML_API_URL;
@@ -68,7 +68,7 @@ const API = "https://telemed-backend-3.onrender.com";
     if (!symptomText.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch(`${API}/predict`, {
+      const res = await fetch(`http://localhost:5001/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ symptom: symptomText }),
