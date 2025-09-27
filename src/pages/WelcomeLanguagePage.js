@@ -191,7 +191,7 @@ export default function WelcomeLanguagePage() {
               lineHeight: "1.1",
             }}
           >
-            Sehat Sathi
+            Sehat Bandhu
           </h1>
         </div>
 
