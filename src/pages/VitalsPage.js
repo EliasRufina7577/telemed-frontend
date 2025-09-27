@@ -71,7 +71,7 @@ const API = "https://telemed-backend-3.onrender.com";
 
   const fetchVitals = async () => {
     try {
-      const res = await fetch("https://telemed-backend-3.onrender.com/vitals");
+      const res = await fetch(`${API}/vitals`);
       const data = await res.json();
       const hr = data.heart_rate ?? data.heartRate;
       const sp = data.spo2 ?? data.SpO2;
