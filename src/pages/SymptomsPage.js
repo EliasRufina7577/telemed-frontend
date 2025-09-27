@@ -68,7 +68,7 @@ function SymptomsPage() {
     if (!symptomText.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/predict", {
+      const res = await fetch("https://telemed-backend-3.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ symptom: symptomText }),
