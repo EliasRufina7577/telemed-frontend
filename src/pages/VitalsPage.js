@@ -307,10 +307,6 @@ const API = "https://telemed-backend-3.onrender.com";
     </div>
   </div>
 </div>
-
-
-
-    
   );
 }
 
