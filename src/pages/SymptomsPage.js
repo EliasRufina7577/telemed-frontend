@@ -16,7 +16,7 @@ function SymptomsPage() {
 
   const selectedLang = localStorage.getItem("appLanguage") || "en";
   const langMap = { en: "en-US", hi: "hi-IN", ta: "ta-IN", pa: "pa-IN" };
-//const API = process.env.REACT_APP_ML_API_URL;
+const API = process.env.REACT_APP_ML_API_URL;
   const startRecording = () => {
     if (!("webkitSpeechRecognition" in window)) {
       alert("Speech recognition not supported in this browser");
@@ -68,7 +68,7 @@ function SymptomsPage() {
     if (!symptomText.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5001/predict`, {
+      const res = await fetch(`${API}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ symptom: symptomText }),
