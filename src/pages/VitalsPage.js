@@ -28,7 +28,7 @@ function VitalsPage() {
   const [roomInfo, setRoomInfo] = useState(null);
   const socketRef = useRef();
 const SOCKET = process.env.REACT_APP_SOCKET_URL;
-const API = "https://telemed-backend-3.onrender.com";
+const API = "https://telemed-backend-ysea.onrender.com";
 const BASE_URL = "https://ml-backend-ndv9.onrender.com"
   // --- Socket.IO connection ---
   useEffect(() => {
